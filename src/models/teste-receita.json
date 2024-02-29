@@ -1,0 +1,63 @@
+{
+  "title": "Strogonoff de Frango",
+  "author": "Delícias da Teka",
+  "rating": 10,
+  "viewCount": 80,
+  "requiredEquipment": [
+    {
+      "name": "utensílios"
+    },
+    {
+      "name": "panelas"
+    },
+    {
+      "name": "fogão"
+    }
+  ],
+  "time": {
+    "prepTime": "40min",
+    "cookTime": "20min",
+    "additionalTime": "0",
+    "totalTime": "60min",
+    "servings": 4
+  },
+  "tips": [
+    {
+      "text": "deixar frango marinando em tempero pelo menos 30 min antes de começar a receita"
+    },
+    {
+      "text": "colocar creme de leite no congelador"
+    }
+  ],
+  "ingredients": [
+    {
+      "text": "1kg de frango"
+    },
+    {
+      "text": "2 cremes de leite 200g"
+    },
+    {
+      "text": "sal e pimenta a gosto"
+    },
+    {
+      "text": "200g champgnion"
+    },
+    {
+      "text": "3 colheres de sopa de extrato de tomate"
+    }
+  ],
+  "directions": [
+    {
+      "text": "Prepar todos os ingredientes e colocar na panela",
+      "timestamp": 10
+    },
+    {
+      "text": "Dourar e cozinhar em fogo médio até fica pronto.",
+      "timestamp": 10
+    }
+  ],
+  "video": "./video-receita-strogonoffe.mp4",
+  "image": "./imagem-receita-strogonoffe.png",
+  "cuisine": "brasileira",
+  "meals": ["almoço", "jantar"]
+}
