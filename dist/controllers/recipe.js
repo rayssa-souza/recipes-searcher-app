@@ -18,7 +18,6 @@ class RecipeController {
         });
         this.create = (req, res) => __awaiter(this, void 0, void 0, function* () {
             const createRecipe = req.body;
-            console.log(createRecipe);
             const response = yield this._service.create(createRecipe);
             return res.status(201).json(response);
         });

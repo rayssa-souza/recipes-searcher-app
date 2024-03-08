@@ -22,7 +22,6 @@ export class RecipeController implements IRecipeController {
 
   create = async (req: Request, res: Response) => {
     const createRecipe: IRecipe = req.body;
-    console.log(createRecipe);
     const response = await this._service.create(createRecipe);
     return res.status(201).json(response);
   };

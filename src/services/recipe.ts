@@ -3,9 +3,9 @@ import { IRecipe } from "../models/recipe";
 
 export interface ISearchFilters {
   search?: string;
-  cuisine?: string[];
-  meals?: string[];
-  ingredients?: string[];
+  cuisine?: string | string[];
+  meals?: string | string[];
+  ingredients?: string | string[];
 }
 export interface IRecipeService {
   list: (filters: ISearchFilters) => Promise<IRecipe[]> | undefined;
@@ -23,14 +23,52 @@ export default class RecipeService implements IRecipeService {
   list = (filters: ISearchFilters) => {
     let query = {};
 
+    console.log(filters);
+
     if (filters.search) {
       query = { ...query, title: { $regex: filters.search, $options: "i" } };
     }
+
+    if (filters.cuisine) {
+      query = {
+        ...query,
+        cuisine: {
+          $in:
+            typeof filters.cuisine === "string"
+              ? [filters.cuisine]
+              : filters.cuisine,
+        },
+      };
+    }
+    if (filters.meals) {
+      query = {
+        ...query,
+        meals: {
+          $in:
+            typeof filters.meals === "string" ? [filters.meals] : filters.meals,
+        },
+      };
+    }
+    if (filters.ingredients) {
+      const allIngredientsArray: string[] =
+        typeof filters.ingredients === "string"
+          ? [filters.ingredients]
+          : (filters.ingredients as string[]);
+
+      query = {
+        ...query,
+        $or: allIngredientsArray.map((ingredient) => ({
+          "ingredients.ingredient": ingredient,
+        })),
+      };
+    }
+
+    console.log(query);
+
     return this._repository.list(query);
   };
 
   create = (recipe: IRecipe) => {
-    console.log(recipe);
     return this._repository.create(recipe);
   };
 

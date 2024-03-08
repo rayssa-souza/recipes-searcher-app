@@ -3,7 +3,7 @@ import { IRecipe } from "../models/recipe";
 
 export interface ISearchFiltersDB {
   title?: string;
-  cuisine?: string[];
+  cuisine?: string;
   meals?: string[];
   ingredients?: string[];
 }

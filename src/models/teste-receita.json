@@ -1,63 +1,358 @@
-{
-  "title": "Strogonoff de Frango",
-  "author": "Delícias da Teka",
-  "rating": 10,
-  "viewCount": 80,
-  "requiredEquipment": [
-    {
-      "name": "utensílios"
+[
+  {
+    "time": {
+      "prepTime": "40min",
+      "cookTime": "20min",
+      "additionalTime": "0",
+      "totalTime": "60min",
+      "servings": 4
     },
-    {
-      "name": "panelas"
-    },
-    {
-      "name": "fogão"
-    }
-  ],
-  "time": {
-    "prepTime": "40min",
-    "cookTime": "20min",
-    "additionalTime": "0",
-    "totalTime": "60min",
-    "servings": 4
+    "title": "Strogonoff de Frango",
+    "author": "Delícias da Teka",
+    "rating": 10,
+    "viewCount": 80,
+    "requiredEquipment": [
+      {
+        "name": "utensílios"
+      },
+      {
+        "name": "panelas"
+      },
+      {
+        "name": "fogão"
+      }
+    ],
+    "tips": [
+      {
+        "text": "deixar frango marinando em tempero pelo menos 30 min antes de começar a receita"
+      },
+      {
+        "text": "colocar creme de leite no congelador"
+      }
+    ],
+    "ingredients": [
+      {
+        "text": "1kg de frango",
+        "ingredient": "frango"
+      },
+      {
+        "text": "2 cremes de leite 200g",
+        "ingredient": "creme-de-leite"
+      },
+      {
+        "text": "sal e pimenta a gosto",
+        "ingredient": null
+      },
+      {
+        "text": "200g champgnion",
+        "ingredient": "champgnion"
+      },
+      {
+        "text": "3 colheres de sopa de extrato de tomate",
+        "ingredient": "extrato-de-tomate"
+      }
+    ],
+    "directions": [
+      {
+        "text": "Prepar todos os ingredientes e colocar na panela",
+        "timestamp": 10
+      },
+      {
+        "text": "Dourar e cozinhar em fogo médio até fica pronto.",
+        "timestamp": 10
+      }
+    ],
+    "video": "./video-receita-strogonoffe.mp4",
+    "image": "./imagem-receita-strogonoffe.png",
+    "cuisine": ["brasileira"],
+    "meals": ["almoço", "jantar"],
+    "source": "www.jujjuk.com.br"
   },
-  "tips": [
-    {
-      "text": "deixar frango marinando em tempero pelo menos 30 min antes de começar a receita"
+  {
+    "time": {
+      "prepTime": "20min",
+      "cookTime": "0min",
+      "additionalTime": "0",
+      "totalTime": "20min",
+      "servings": 2
     },
-    {
-      "text": "colocar creme de leite no congelador"
-    }
-  ],
-  "ingredients": [
-    {
-      "text": "1kg de frango"
+    "title": "Salada fria",
+    "author": "Paladar da Rita",
+    "rating": 8,
+    "viewCount": 60,
+    "requiredEquipment": [
+      {
+        "name": "utensílios",
+        "_id": "65ea05267d1696d137afce80"
+      },
+      {
+        "name": "Tigela de 20 cm de diâmetro",
+        "_id": "65ea05267d1696d137afce81"
+      }
+    ],
+    "tips": [
+      {
+        "text": "higienizar folhas com antecedência",
+        "_id": "65ea05267d1696d137afce82"
+      }
+    ],
+    "ingredients": [
+      {
+        "text": "300g de alface americana",
+        "ingredient": "alface",
+        "_id": "65ea05267d1696d137afce83"
+      },
+      {
+        "text": "100g de tomate cereja",
+        "ingredient": "tomate",
+        "_id": "65ea05267d1696d137afce84"
+      },
+      {
+        "text": "50g de palmito",
+        "ingrediente": "palmito",
+        "_id": "65ea05267d1696d137afce85"
+      },
+      {
+        "text": "1 colher de sopa de azeite de oliva",
+        "ingrediente": null,
+        "_id": "65ea05267d1696d137afce86"
+      },
+      {
+        "text": "Sal e pimenta a gosto",
+        "ingrediente": null,
+        "_id": "65ea05267d1696d137afce87"
+      }
+    ],
+    "directions": [
+      {
+        "text": "Cortar os tomates cereja ao meio e reservar",
+        "timestamp": 4,
+        "_id": "65ea05267d1696d137afce88"
+      },
+      {
+        "text": "Cortar os palmitos em cubos e reservar",
+        "timestamp": 5,
+        "_id": "65ea05267d1696d137afce89"
+      },
+      {
+        "text": "Cortar folhas de alface",
+        "timestamp": 5,
+        "_id": "65ea05267d1696d137afce8a"
+      },
+      {
+        "text": "Misturar todos os ingredientes em uma tigela",
+        "timestamp": 5,
+        "_id": "65ea05267d1696d137afce8b"
+      }
+    ],
+    "video": "./video-receita-salada-fria.mp4",
+    "image": "./imagem-receita-salada-fria.png",
+    "cuisine": ["francesa"],
+    "meals": ["jantar"],
+    "source": "www.paladardarita.com.br/teste",
+    "__v": 0
+  },
+  {
+    "time": {
+      "prepTime": "40min",
+      "cookTime": "20min",
+      "additionalTime": "0",
+      "totalTime": "60min",
+      "servings": 3
     },
-    {
-      "text": "2 cremes de leite 200g"
+    "_id": "65ea00447d1696d137afce5c",
+    "title": "Temaki de salmão",
+    "author": "Delícias da Bianca",
+    "rating": 10,
+    "viewCount": 80,
+    "requiredEquipment": [
+      {
+        "name": "utensílios",
+        "_id": "65ea00447d1696d137afce5d"
+      },
+      {
+        "name": "panelas",
+        "_id": "65ea00447d1696d137afce5e"
+      }
+    ],
+    "tips": [
+      {
+        "text": "deixar de salmão marinando em tempero pelo menos 30 min antes de começar a receita",
+        "_id": "65ea00447d1696d137afce5f"
+      },
+      {
+        "text": "colocar nori no congelador",
+        "_id": "65ea00447d1696d137afce60"
+      }
+    ],
+    "ingredients": [
+      {
+        "text": "1kg de salmão",
+        "ingredient": "salmão",
+        "_id": "65ea00447d1696d137afce61"
+      },
+      {
+        "text": "3 Noris",
+        "ingredient": "nori",
+        "_id": "65ea00447d1696d137afce62"
+      },
+      {
+        "text": "sal e pimenta a gosto",
+        "ingredient": null,
+        "_id": "65ea00447d1696d137afce63"
+      },
+      {
+        "text": "50g de picles",
+        "ingredient": "picles",
+        "_id": "65ea00447d1696d137afce64"
+      },
+      {
+        "text": "1 xícara de chá de arroz japonês",
+        "ingredient": "arroz japonês",
+        "_id": "65ea00447d1696d137afce65"
+      },
+      {
+        "text": "4 colheres de sopa de vinagre de arroz",
+        "ingredient": "vinagre de arroz",
+        "_id": "65ea00447d1696d137afce66"
+      }
+    ],
+    "directions": [
+      {
+        "text": "Reserve o nori",
+        "timestamp": 1,
+        "_id": "65ea00447d1696d137afce67"
+      },
+      {
+        "text": "Cozinhar o arroz",
+        "timestamp": 10,
+        "_id": "65ea00447d1696d137afce68"
+      },
+      {
+        "text": "Temperar arroz com vinagre e sal",
+        "timestamp": 5,
+        "_id": "65ea00447d1696d137afce69"
+      },
+      {
+        "text": "Temperar salmão com sal e pimenta à gosto",
+        "timestamp": 5,
+        "_id": "65ea00447d1696d137afce6a"
+      },
+      {
+        "text": "Montar o tameki com os ingredientes e enrolá-lo no nori reservado",
+        "timestamp": 5,
+        "_id": "65ea00447d1696d137afce6b"
+      }
+    ],
+    "video": "./video-receita-temaki-salmao.mp4",
+    "image": "./imagem-receita-temaki-salmao.png",
+    "cuisine": ["japonesa"],
+    "meals": ["jantar"],
+    "source": "www.deliciasdabianca.com.br/teste",
+    "__v": 0
+  },
+  {
+    "time": {
+      "prepTime": "50min",
+      "cookTime": "30min",
+      "additionalTime": "0",
+      "totalTime": "80min",
+      "servings": 10
     },
-    {
-      "text": "sal e pimenta a gosto"
-    },
-    {
-      "text": "200g champgnion"
-    },
-    {
-      "text": "3 colheres de sopa de extrato de tomate"
-    }
-  ],
-  "directions": [
-    {
-      "text": "Prepar todos os ingredientes e colocar na panela",
-      "timestamp": 10
-    },
-    {
-      "text": "Dourar e cozinhar em fogo médio até fica pronto.",
-      "timestamp": 10
-    }
-  ],
-  "video": "./video-receita-strogonoffe.mp4",
-  "image": "./imagem-receita-strogonoffe.png",
-  "cuisine": "brasileira",
-  "meals": ["almoço", "jantar"]
-}
+    "_id": "65ea03a07d1696d137afce6d",
+    "title": "Cuca de Ricota",
+    "author": "Paladar Gaúcho",
+    "rating": 9,
+    "viewCount": 70,
+    "requiredEquipment": [
+      {
+        "name": "utensílios",
+        "_id": "65ea03a07d1696d137afce6e"
+      },
+      {
+        "name": "forma retangular 20x20cm",
+        "_id": "65ea03a07d1696d137afce6f"
+      },
+      {
+        "name": "fogão",
+        "_id": "65ea03a07d1696d137afce70"
+      }
+    ],
+    "tips": [
+      {
+        "text": "usar ricota, queijo quark ou queijinho caseiro",
+        "_id": "65ea03a07d1696d137afce71"
+      }
+    ],
+    "ingredients": [
+      {
+        "text": "1kg de ricota",
+        "ingredient": "ricota",
+        "_id": "65ea03a07d1696d137afce72"
+      },
+      {
+        "text": "200g de farinha de trigo",
+        "ingredient": "farinha de trigo",
+        "_id": "65ea03a07d1696d137afce73"
+      },
+      {
+        "text": "100g de açúcar refinado",
+        "ingredient": "açúcar",
+        "_id": "65ea03a07d1696d137afce74"
+      },
+      {
+        "text": "150g de manteiga sem sal",
+        "ingredient": "manteiga",
+        "_id": "65ea03a07d1696d137afce75"
+      },
+      {
+        "text": "1 ovos grande",
+        "ingredient": "ovo",
+        "_id": "65ea03a07d1696d137afce76"
+      },
+      {
+        "text": "100g de nata",
+        "ingredient": "nata",
+        "_id": "65ea03a07d1696d137afce77"
+      }
+    ],
+    "directions": [
+      {
+        "text": "Numa vasilha, misturar farinha, manteiga e 50g de açúcar até ficar homogêneo e modelável",
+        "timestamp": 10,
+        "_id": "65ea03a07d1696d137afce78"
+      },
+      {
+        "text": "Espalhar a massa em uma travessa retangular, deixando uma camada fina e reservar",
+        "timestamp": 5,
+        "_id": "65ea03a07d1696d137afce79"
+      },
+      {
+        "text": "Pré-aquecer o forno a 180°C por 15 minutos",
+        "timestamp": 1,
+        "_id": "65ea03a07d1696d137afce7a"
+      },
+      {
+        "text": "Misturar em uma vasilha, a ricota, o restante do açúcar, a nata e o ovo até ficar homogêneo e com pequenos grumos",
+        "timestamp": 5,
+        "_id": "65ea03a07d1696d137afce7b"
+      },
+      {
+        "text": "Despejar o recheio por cima da massa na travessa.",
+        "timestamp": 3,
+        "_id": "65ea03a07d1696d137afce7c"
+      },
+      {
+        "text": "Assar no forno pré-aquecido por 40 min",
+        "timestamp": 40,
+        "_id": "65ea03a07d1696d137afce7d"
+      }
+    ],
+    "video": "./video-receita-cuca-ricota.mp4",
+    "image": "./imagem-receita-cuca-ricota.png",
+    "cuisine": ["brasileira"],
+    "meals": ["lanche", "cafe-da-manha"],
+    "source": "www.paladargaucho.com.br/teste",
+    "__v": 0
+  }
+]

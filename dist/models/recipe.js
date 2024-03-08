@@ -15,7 +15,12 @@ const recipeSchema = new mongoose_1.Schema({
         servings: { type: Number, required: true },
     },
     tips: [{ text: { type: String, required: true } }],
-    ingredients: [{ text: { type: String, required: true } }],
+    ingredients: [
+        {
+            text: { type: String, required: true },
+            ingredient: { type: String },
+        },
+    ],
     directions: [
         {
             text: { type: String, required: true },
@@ -24,7 +29,7 @@ const recipeSchema = new mongoose_1.Schema({
     ],
     video: { type: String, required: true },
     image: { type: String, required: true },
-    cuisine: { type: String, required: true },
+    cuisine: [{ type: String, required: true }],
     meals: [{ type: String, required: true }],
     source: { type: String, required: true },
 });
