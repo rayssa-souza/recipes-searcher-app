@@ -1,14 +1,16 @@
 import { IRecipeRepository } from "../repositories/recipe";
 import { IRecipe } from "../models/recipe";
 
-export interface ISearchFilters {
+export interface IQuery {
   search?: string;
   cuisine?: string | string[];
   meals?: string | string[];
   ingredients?: string | string[];
+  page?: string | undefined;
 }
+
 export interface IRecipeService {
-  list: (filters: ISearchFilters) => Promise<IRecipe[]> | undefined;
+  list: (query: IQuery) => Promise<IRecipe[]> | undefined;
   create: (recipe: IRecipe) => Promise<IRecipe>;
   findById: (id: string) => Promise<IRecipe | null>;
 }
@@ -20,52 +22,54 @@ export default class RecipeService implements IRecipeService {
     this._repository = repository;
   }
 
-  list = (filters: ISearchFilters) => {
-    let query = {};
+  list = (query: IQuery) => {
+    let filters = {};
+    const pageSize = 1;
+    let pagination = { skip: 0, limit: pageSize };
 
-    console.log(filters);
+    const page = query.page === undefined ? 1 : parseInt(query.page);
 
-    if (filters.search) {
-      query = { ...query, title: { $regex: filters.search, $options: "i" } };
+    pagination = {
+      ...pagination,
+      skip: page === 1 ? 0 : (page - 1) * pageSize,
+    };
+
+    if (query.search) {
+      filters = { ...filters, title: { $regex: query.search, $options: "i" } };
     }
 
-    if (filters.cuisine) {
-      query = {
-        ...query,
+    if (query.cuisine) {
+      filters = {
+        ...filters,
         cuisine: {
           $in:
-            typeof filters.cuisine === "string"
-              ? [filters.cuisine]
-              : filters.cuisine,
+            typeof query.cuisine === "string" ? [query.cuisine] : query.cuisine,
         },
       };
     }
-    if (filters.meals) {
-      query = {
-        ...query,
+    if (query.meals) {
+      filters = {
+        ...filters,
         meals: {
-          $in:
-            typeof filters.meals === "string" ? [filters.meals] : filters.meals,
+          $in: typeof query.meals === "string" ? [query.meals] : query.meals,
         },
       };
     }
-    if (filters.ingredients) {
+    if (query.ingredients) {
       const allIngredientsArray: string[] =
-        typeof filters.ingredients === "string"
-          ? [filters.ingredients]
-          : (filters.ingredients as string[]);
+        typeof query.ingredients === "string"
+          ? [query.ingredients]
+          : (query.ingredients as string[]);
 
-      query = {
-        ...query,
+      filters = {
+        ...filters,
         $or: allIngredientsArray.map((ingredient) => ({
           "ingredients.ingredient": ingredient,
         })),
       };
     }
 
-    console.log(query);
-
-    return this._repository.list(query);
+    return this._repository.list(filters, pagination);
   };
 
   create = (recipe: IRecipe) => {

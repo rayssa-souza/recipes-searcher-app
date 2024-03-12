@@ -1,15 +1,24 @@
 import { Model } from "mongoose";
 import { IRecipe } from "../models/recipe";
 
-export interface ISearchFiltersDB {
-  title?: string;
-  cuisine?: string;
-  meals?: string[];
-  ingredients?: string[];
+export interface IQueryDB {
+  search?: string;
+  cuisine?: string | string[];
+  meals?: string | string[];
+  ingredients?: string | string[];
+  page?: string | undefined;
+}
+
+export interface IPaginationDB {
+  skip: number;
+  limit: number;
 }
 
 export interface IRecipeRepository {
-  list: (filters: ISearchFiltersDB) => Promise<IRecipe[]> | undefined;
+  list: (
+    filters: IQueryDB,
+    pagination: IPaginationDB
+  ) => Promise<IRecipe[]> | undefined;
   create: (recipe: IRecipe) => Promise<IRecipe>;
   findById: (id: string) => Promise<IRecipe | null>;
 }
@@ -21,8 +30,13 @@ export default class RecipeRepository implements IRecipeRepository {
     this._model = model;
   }
 
-  list = (query: ISearchFiltersDB) => {
-    return this._model.find(query);
+  list = (query: IQueryDB, pagination: IPaginationDB) => {
+    console.log(query);
+    console.log(pagination);
+    return this._model
+      .find(query)
+      .skip(pagination.skip)
+      .limit(pagination.limit);
   };
 
   create = (recipe: IRecipe) => {
